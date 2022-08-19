@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tedxnsysu/static/css/main.54a8e001.css",
+    "main.js": "/tedxnsysu/static/js/main.24ee473a.js",
+    "static/media/crew0.png": "/tedxnsysu/static/media/crew0.235524c755d856270db1.png",
+    "static/media/event0.png": "/tedxnsysu/static/media/event0.2dde588102b67ad2bf75.png",
+    "index.html": "/tedxnsysu/index.html",
+    "main.54a8e001.css.map": "/tedxnsysu/static/css/main.54a8e001.css.map",
+    "main.24ee473a.js.map": "/tedxnsysu/static/js/main.24ee473a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54a8e001.css",
+    "static/js/main.24ee473a.js"
+  ]
+}
