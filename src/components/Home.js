@@ -16,7 +16,6 @@ const Home = () => {
 
     useEffect(() => {
         function handleResize() {
-          console.log(window.innerWidth)
           if(window.innerWidth < 768){
             setSizeParam(0.9);
           }
@@ -33,7 +32,7 @@ const Home = () => {
     return(
         <div className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700 h-screen overflow-hidden`}>
         
-            <div className="f-full mx-auto flex justify-center">
+            <div className="h-full mx-auto flex justify-center">
                 <div className="flex justify-center md:w-96 w-72 relative items-center">
                     <div className='w-0 relative'>
                         
@@ -78,17 +77,18 @@ const Home = () => {
 
                         <div className={`mask1 ${lightOn? 'bg-backgroundBright' : ' bg-background'}
                                              absolute -translate-x-1/2 -translate-y-1/2 duration-700 `} 
-                                style={{width:lightOn? 150*sizeParam+'px':30* sizeParam + 'px',height:30 * sizeParam+'px', top:200 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
+                                style={{width:lightOn? 150*sizeParam+'px':30* sizeParam + 'px',height:30 * sizeParam+'px', top:200 * sizeParam + 'px'}}>
                         </div>
 
                         <div className={`mask2 ${lightOn? 'bg-backgroundBright' : 'bg-background'}
                                              absolute -translate-x-1/2 duration-700 `} 
-                                style={{width:100 * sizeParam + 'px',height:lightOn? 80*sizeParam+'px' : 0 * sizeParam+'px', top:185 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
+                                style={{width:100 * sizeParam + 'px',height:lightOn? 80*sizeParam+'px' : 0 * sizeParam+'px', top:185 * sizeParam + 'px'}}>
                         </div>
 
                         <div className={`middle absolute -translate-x-1/2 -translate-y-1/2 duration-700 rounded-full
                                             ${lightOn? ' bg-red' : 'bg-whiteish'}`} 
-                                style={{width:13*sizeParam + 'px', height:lightOn ?100 * sizeParam+'px' : 73 * sizeParam+'px', top:198 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
+                                style={{width:13*sizeParam + 'px', height:lightOn ?100 * sizeParam+'px' : 73 * sizeParam+'px', top:148 * sizeParam + 'px', left:-6.5 * sizeParam + 'px',
+                                        transform:lightOn?'rotate(90deg)':'rotate(0deg) translateY(10px)'}}>
                         </div>
 
                         {DecorationBase.map((item, index) =>{
