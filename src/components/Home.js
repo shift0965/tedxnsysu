@@ -15,7 +15,6 @@ const Home = () => {
     const [sizeParam, setSizeParam] = useState(1);
 
     useEffect(() => {
-        // Handler to call on window resize
         function handleResize() {
           console.log(window.innerWidth)
           if(window.innerWidth < 768){
@@ -25,20 +24,17 @@ const Home = () => {
             setSizeParam(1);
           }
         }
-        // Add event listener
         window.addEventListener("resize", handleResize);
-        // Call handler right away so state gets updated with initial window size
         handleResize();
-        // Remove event listener on cleanup
         return () => window.removeEventListener("resize", handleResize);
       }, []);
 
 
     return(
-        <div className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700`}>
+        <div className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700 h-screen overflow-hidden`}>
         
-            <div className="h-screen mx-auto flex justify-center">
-                <div className="flex justify-center h-screen md:w-96 w-72 relative items-center">
+            <div className="f-full mx-auto flex justify-center">
+                <div className="flex justify-center md:w-96 w-72 relative items-center">
                     <div className='w-0 relative'>
                         
                         {LinkCircles.map((item, index) =>{
@@ -91,7 +87,7 @@ const Home = () => {
                         </div>
 
                         <div className={`middle absolute -translate-x-1/2 -translate-y-1/2 duration-700 rounded-full
-                                            ${lightOn? ' bg-red -rotate-90' : 'bg-whiteish rotate-0'}`} 
+                                            ${lightOn? ' bg-red' : 'bg-whiteish'}`} 
                                 style={{width:13*sizeParam + 'px', height:lightOn ?100 * sizeParam+'px' : 73 * sizeParam+'px', top:198 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
                         </div>
 
