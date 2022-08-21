@@ -11,9 +11,9 @@ const Crew = () => {
     return(
         <div className="main-container">
             <Header/>
-            <div className=" w-full bg-fixed 2xl:h-xl_crew_h lg:h-l_crew_h h-52 2xl:bg-cover 2xl:bg-center bg-contain bg-no-repeat bg-crew0">
+            <div className=" w-full bg-fixed 2xl:h-xl_crew_h lg:h-l_crew_h md:h-52 h-36 2xl:bg-cover 2xl:bg-center bg-contain bg-no-repeat bg-crew0">
             </div>
-            <div className=" mt-8 w-full main-container">
+            <div className=" md:mt-8 w-full main-container">
                 <div className=" content-container lg:pl-20 lg:pr-20 p-7">
                     <div className="left lg:w-5/12 lg:order-1 order-2 mt-12 lg:mr-5">
                         <div className="img-container lg:pr-0 lg:pl-0 pr-5 pl-5">

@@ -29,8 +29,8 @@ const Footer = () => {
                         <FontAwesomeIcon className='w-full h-full text-orange-400' icon={faInstagram}/></div>
                     </div>
                     
-                <div className="icons flex justify-center text-white">© TEDxNSYSU ALL RIGHTS RESERVE</div>
-                <div className="icons flex justify-center text-gray">Designed and developed by HungShengChen</div>
+                <div className="icons text-center text-white">© TEDxNSYSU ALL RIGHTS RESERVE</div>
+                <div className="icons text-center text-gray">Designed and developed by HungShengChen</div>
             </div>
         </div>
     )

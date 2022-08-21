@@ -1,6 +1,5 @@
 import { DecorationBase, DecorationCircles, LinkCircles } from "./tools/LightBulb"
 import { Link } from "react-router-dom"
-import {ImSwitch} from  'react-icons/im'
 import { useState } from "react"
 
 
@@ -13,13 +12,13 @@ const Home = () => {
         console.log(lightOn)
     }
 
-    const colors = ['#F20C00', '#FFFAFA', '#141414']
+    const colors = ['#F20C00', '#FFFAFA', '#000000']
     const sizeParam = 1;
 
     return(
         <div className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700`}>
         
-            <div className="right h-screen mx-auto">
+            <div className="h-screen mx-auto flex justify-center">
                 <div className="flex justify-center h-screen md:w-96 w-72 relative items-center">
                     <div className="w-0 relative">
                         
@@ -29,12 +28,13 @@ const Home = () => {
                             const y = item.y * 25 * sizeParam + 'px';
                             const width = (item.size * 10 * sizeParam) + 'px';
                             return(
-                                <Link className={` ${lightOn? 'opacity-100' : 'opacity-0'}
-                                        absolute rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center shadow-md shadow-gray
+                                <Link className={` ${lightOn? 'opacity-100 scale-100' : 'opacity-0 scale-50'}
+                                        absolute rounded-full -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center shadow-md shadow-gray
                                       hover:scale-90 hover:duration-300 duration-700`}
                                       style={{width:width, height:width, top:y, left:x, backgroundColor:colors[item.color]}}
                                       to={item.to} key={index}>
-                                    <span className=" text-xl font-extrabold">{item.title}</span>
+                                    <span className=" text-xl font-bold mt-2" style={{color:colors[item.textColor1]}}>{item.title}</span>
+                                    <span className=" text-md font-bold" style={{color:colors[item.textColor2]}}>{item.subTitle}</span>
                                 </Link>
                             )
                         })}
@@ -45,11 +45,12 @@ const Home = () => {
                             const y = item.y * 25 * sizeParam + 'px';
                             const width = (item.size * 10 * sizeParam) + 'px';
                             return(
-                                <div className={` ${lightOn? 'opacity-100' : 'opacity-0'}
+                                <div className={` ${lightOn? 'opacity-100 scale-100' : 'opacity-0 scale-50'}
                                         absolute rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center shadow-md shadow-gray
                                         duration-700`}
                                      style={{width:width, height:width, top:y, left:x, backgroundColor:colors[item.color]}}
                                      key={index}>
+                                    
                                 </div>
                             )
                         })}
@@ -91,11 +92,12 @@ const Home = () => {
                         }
                         )}
 
-                        <div className={`buttom ${lightOn? ' border-transparent' : ' border-whiteish'}
+                        <div className={`border-transparent
                                         block absolute rounded-full -translate-x-1/2 -translate-y-1/2 items-center justify-center duration-700 border-2 bg-transparent cursor-pointer`} 
                                 style={{width:180 * sizeParam + 'px',height:180 * sizeParam+'px', top:225 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}
                                 onClick={switchLight}>
                         </div>
+
 
                     </div>
                     
@@ -112,6 +114,12 @@ export default Home
 
 
 /*
+buttom ${lightOn? ' border-transparent' : ' border-whiteish'}
 
+<div className={`buttom ${lightOn? ' border-transparent' : ' border-whiteish'}
+                block absolute rounded-full -translate-x-1/2 -translate-y-1/2 items-center justify-center duration-700 border-2 bg-transparent cursor-pointer`} 
+        style={{width:180 * sizeParam + 'px',height:180 * sizeParam+'px', top:225 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}
+        onClick={switchLight}>
+</div>
 
 */

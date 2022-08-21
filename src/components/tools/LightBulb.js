@@ -4,9 +4,11 @@ export const LinkCircles = [
         x: -4.5, 
         y: -6.3, 
         size: 16.2, 
-        color: 0, 
-        textColor: 1,
-        title: '年會',
+        color: 1, 
+        textColor1: 2,
+        textColor2: 0,
+        title: '來點演講',
+        subTitle: 'WATCH',
         to: '/conference'
     },
     {
@@ -14,9 +16,11 @@ export const LinkCircles = [
         x: 5,
         y: -2.7, 
         size: 15,
-        color: 1,
-        textColor: 0,
-        title: '團隊',
+        color: 2,
+        textColor1: 1,
+        textColor2: 0,
+        title: '關於我們',
+        subTitle: 'ABOUT',
         to: '/crew'
     },
     {
@@ -24,9 +28,10 @@ export const LinkCircles = [
         x: -4,
         y: 0, 
         size: 13.5,
-        color: 2,
-        textColor: 0,
-        title: '購票',
+        color: 0,
+        textColor: 1,
+        title: '',
+        subTitle: '',
         to: '/ticket'
     },
 ]
@@ -53,14 +58,14 @@ export const DecorationCircles = [
         x: 5,
         y: -8, 
         size: 10,
-        color: 2 
+        color: 0 
     },
     {
         index:6,
         x: 2,
         y: 3, 
         size: 8,
-        color: 0
+        color: 1
     },
     {
         index:7,
@@ -172,7 +177,7 @@ export const DecorationCircles = [
         x: -2.3,
         y: -10, 
         size: 2,
-        color: 1
+        color: 0
     },
     {
         index:23,
@@ -202,7 +207,7 @@ export const DecorationCircles = [
         x: 0.8,
         y: -8.7, 
         size: 1.8,
-        color: 0
+        color: 1
     },
 
     {
@@ -210,7 +215,7 @@ export const DecorationCircles = [
         x: -10,
         y: -4.8, 
         size: 1,
-        color: 1
+        color: 0
     },
     {
         index:28,

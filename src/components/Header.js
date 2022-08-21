@@ -1,12 +1,21 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import classNames from "classnames";
+import logo from './tools/imgs/logo.png'
 
 
-const Header = (props) => {
+const Header = () => {
+
+    const [barOpen, setBarOpen] = new useState(true);
+    const switchBar = () => {
+        setBarOpen(!barOpen);
+    }
+
+    const closeBar = () => {
+        setBarOpen(false);
+    }
 
     const [isShrunk, setShrunk] = useState(false);
-    console.log(props.textBlack);
 
     useEffect(() => {
         const handler = () =>{
@@ -34,22 +43,38 @@ const Header = (props) => {
         window.open("https://www.google.com")
     }
 
-    const navBarClass = classNames("flex justify-center w-full h-14 bg-transparent fixed top-0 z-40 duration-500",
+    const navBarClass = classNames("flex w-full max-w-5xl duration-500",
                                     {"-translate-y-14":isShrunk});
 
     return(
-        <nav className={navBarClass}>
-            <div className="flex w-full max-w-5xl">
-                <div className="logo cursor-pointer min-w-fit" onClick={OpenFacebook}>
-                    <img className="h-full w-full p-1.5"
-                        src="imgs/logo.png" alt="tedxnsysu logo" />
-                </div>
-                <div className={`btns flex ml-auto ${props.textBlack ? 'text-black' : 'text-white' }`}>
- 
-                    <Link to={'/'}><button className="navbar-btn">首頁</button></Link>
-                    <Link to={'/conference'}><button className="navbar-btn">年會</button></Link>
-                    <Link to={'/crew'}><button className="navbar-btn">團隊</button></Link>
-                    <Link to={'/ticket'}><button className="navbar-btn">購票</button></Link>
+        <nav className='flex justify-center w-full h-14 bg-transparent fixed top-0 z-40'>
+
+            <button className={`nav_toggle w-16 h-16 z-50  ${barOpen? "active" : ""}`} onClick={switchBar}>
+                <div className="nav_toggle_bar top-6 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="nav_toggle_bar top-9 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+            </button> 
+
+            <div className={navBarClass}>
+                <div className="logo cursor-pointer md:w-48 w-0 md:mx-0 mx-auto" onClick={OpenFacebook}>
+                    <img className="w-full p-1.5"
+                        src={logo} alt="tedxnsysu logo" />
+                </div> 
+
+                <div className={`nav_menu ${barOpen? "" : "active"} flex ml-auto text-white`}>
+                    <ul className="nav_list text-title">
+                        <li>
+                            <Link to={'/'} className="nav_link" onClick={closeBar}>首頁</Link>
+                        </li> 
+                        <li>
+                            <Link to={'/conference'} className="nav_link" onClick={closeBar}>年會</Link>
+                        </li> 
+                        <li>
+                            <Link to={'/crew'} className="nav_link" onClick={closeBar}>團隊</Link>
+                        </li> 
+                        <li>
+                            <Link to={'/ticket'} className="nav_link" onClick={closeBar}>購票</Link>
+                        </li> 
+                    </ul>
                 </div>
             </div>
         </nav>

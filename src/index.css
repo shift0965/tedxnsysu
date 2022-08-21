@@ -1,14 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Noto+Sans+TC&display=swap');
 @layer components{
-  .navbar-btn{
-    @apply flex items-center justify-center 
-           w-24 h-full text-xl bg-transparent
-           hover:text-primary duration-300
-           font-bold
-  }
 
   .full-page{
     @apply  flex w-full min-h-screen h-minPageHeight
@@ -40,15 +34,69 @@
 }
 
 body {
+  font-family: 'Fira Sans', sans-serif;
   font-family: 'Noto Sans TC', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color:black
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav_toggle .nav_toggle_bar{
+  @apply block h-1 w-6 rounded-full absolute bg-whiteish duration-300
+}
+.nav_toggle:hover .nav_toggle_bar{
+  @apply bg-backgroundBright
 }
 
+.nav_toggle.active .nav_toggle_bar:nth-of-type(1){
+  @apply rotate-45 translate-y-1.5
+}
+.nav_toggle.active .nav_toggle_bar:nth-of-type(2){
+  @apply -rotate-45 -translate-y-1.5
+}
+
+/* min width */
+
+@media screen and (max-width: 760px){
+
+  .nav_menu{
+    @apply fixed w-full bg-transparent shadow-2xl shadow-black rounded-b-3xl top-0 pt-10 pb-5 px-6 duration-500 bg-background opacity-80
+  }
+
+  .nav_menu.active{
+    @apply -top-96 opacity-0
+  }
+  
+  .nav_list{
+    @apply flex flex-col w-full
+  }
+
+  .nav_link{
+    @apply flex items-center justify-center text-xl hover:text-backgroundBright duration-300 w-full h-16 font-bold
+  }
+
+  .nav_toggle{
+    @apply absolute right-0 top-0
+  }
+}
+
+
+/* normal screen */
+
+@media screen and (min-width: 760px){
+
+  .nav_menu{
+    @apply top-0 ml-auto
+  }
+
+  .nav_list{
+    @apply flex ml-auto w-fit
+  }
+
+  .nav_link{
+    @apply flex items-center text-xl hover:text-backgroundBright duration-300 px-10 h-full w-full font-bold
+  }
+
+  .nav_toggle{
+    @apply absolute -right-20 opacity-0
+  } 
+
+}
