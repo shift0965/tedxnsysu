@@ -71,9 +71,9 @@ const Home = () => {
                                 style={{width:100 * sizeParam + 'px',height:lightOn? 80*sizeParam+'px' : 0 * sizeParam+'px', top:185 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
                         </div>
 
-                        <div className={`middle ${lightOn? ' bg-red rotate-90' : 'bg-whiteish'}
-                                             absolute -translate-x-1/2 -translate-y-1/2 duration-700 rounded-full `} 
-                                style={{width: 13* sizeParam + 'px',height:lightOn? 100 * sizeParam+'px':73 * sizeParam+'px', top:197 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
+                        <div className={`middle absolute -translate-x-1/2 -translate-y-1/2 duration-700 rounded-full
+                                            ${lightOn? ' bg-red rotate-90' : 'bg-whiteish rotate-0'}`} 
+                                style={{width:13*sizeParam + 'px', height:lightOn ?100 * sizeParam+'px' : 73 * sizeParam+'px', top:198 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
                         </div>
 
                         {DecorationBase.map((item, index) =>{
