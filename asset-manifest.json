@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tedxnsysu/static/css/main.54202a55.css",
-    "main.js": "/tedxnsysu/static/js/main.621fed35.js",
+    "main.css": "/tedxnsysu/static/css/main.756f69a1.css",
+    "main.js": "/tedxnsysu/static/js/main.a821a575.js",
     "static/media/crew0_black.png": "/tedxnsysu/static/media/crew0_black.d10a42d32ef4595fda26.png",
     "static/media/crew.jpg": "/tedxnsysu/static/media/crew.e6a388affc827c9a1e91.jpg",
     "static/media/wangxinling.jpg": "/tedxnsysu/static/media/wangxinling.718e9a03ff9d791e7828.jpg",
@@ -23,12 +23,13 @@
     "static/media/chenruijia.jpeg": "/tedxnsysu/static/media/chenruijia.2c5a1c562c73a90ac897.jpeg",
     "static/media/Conference2017.jpg": "/tedxnsysu/static/media/Conference2017.9bafc70d77777755807f.jpg",
     "static/media/25_Most_Popular.jpg": "/tedxnsysu/static/media/25_Most_Popular.53a06c4ffbd51944af7d.jpg",
+    "static/media/logo.png": "/tedxnsysu/static/media/logo.f7fb1bb64e570693547c.png",
     "index.html": "/tedxnsysu/index.html",
-    "main.54202a55.css.map": "/tedxnsysu/static/css/main.54202a55.css.map",
-    "main.621fed35.js.map": "/tedxnsysu/static/js/main.621fed35.js.map"
+    "main.756f69a1.css.map": "/tedxnsysu/static/css/main.756f69a1.css.map",
+    "main.a821a575.js.map": "/tedxnsysu/static/js/main.a821a575.js.map"
   },
   "entrypoints": [
-    "static/css/main.54202a55.css",
-    "static/js/main.621fed35.js"
+    "static/css/main.756f69a1.css",
+    "static/js/main.a821a575.js"
   ]
 }
