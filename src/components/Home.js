@@ -1,6 +1,6 @@
 import { DecorationBase, DecorationCircles, LinkCircles } from "./tools/LightBulb"
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 
 
 const Home = () => {
@@ -9,18 +9,37 @@ const Home = () => {
 
     const switchLight = () => {
         setLightOn(!lightOn);
-        console.log(lightOn)
     }
 
     const colors = ['#F20C00', '#FFFAFA', '#000000']
-    const sizeParam = 1;
+    const [sizeParam, setSizeParam] = useState(1);
+
+    useEffect(() => {
+        // Handler to call on window resize
+        function handleResize() {
+          console.log(window.innerWidth)
+          if(window.innerWidth < 768){
+            setSizeParam(0.9);
+          }
+          else{
+            setSizeParam(1);
+          }
+        }
+        // Add event listener
+        window.addEventListener("resize", handleResize);
+        // Call handler right away so state gets updated with initial window size
+        handleResize();
+        // Remove event listener on cleanup
+        return () => window.removeEventListener("resize", handleResize);
+      }, []);
+
 
     return(
         <div className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700`}>
         
             <div className="h-screen mx-auto flex justify-center">
                 <div className="flex justify-center h-screen md:w-96 w-72 relative items-center">
-                    <div className="w-0 relative">
+                    <div className='w-0 relative'>
                         
                         {LinkCircles.map((item, index) =>{
                             
@@ -28,7 +47,7 @@ const Home = () => {
                             const y = item.y * 25 * sizeParam + 'px';
                             const width = (item.size * 10 * sizeParam) + 'px';
                             return(
-                                <Link className={` ${lightOn? 'opacity-100 scale-100' : 'opacity-0 scale-50'}
+                                <Link className={` ${lightOn? 'opacity-100 scale-100' : 'opacity-0 scale-0'}
                                         absolute rounded-full -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center shadow-md shadow-gray
                                       hover:scale-90 hover:duration-300 duration-700`}
                                       style={{width:width, height:width, top:y, left:x, backgroundColor:colors[item.color]}}
@@ -72,7 +91,7 @@ const Home = () => {
                         </div>
 
                         <div className={`middle absolute -translate-x-1/2 -translate-y-1/2 duration-700 rounded-full
-                                            ${lightOn? ' bg-red rotate-90' : 'bg-whiteish rotate-0'}`} 
+                                            ${lightOn? ' bg-red -rotate-90' : 'bg-whiteish rotate-0'}`} 
                                 style={{width:13*sizeParam + 'px', height:lightOn ?100 * sizeParam+'px' : 73 * sizeParam+'px', top:198 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}>
                         </div>
 
@@ -93,7 +112,7 @@ const Home = () => {
                         )}
 
                         <div className={`border-transparent
-                                        block absolute rounded-full -translate-x-1/2 -translate-y-1/2 items-center justify-center duration-700 border-2 bg-transparent cursor-pointer`} 
+                                        block absolute rounded-full -translate-x-1/2 -translate-y-1/2 duration-700 border-2 bg-transparent cursor-pointer`} 
                                 style={{width:180 * sizeParam + 'px',height:180 * sizeParam+'px', top:225 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}
                                 onClick={switchLight}>
                         </div>
