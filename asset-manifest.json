@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tedxnsysu/static/css/main.097db79d.css",
-    "main.js": "/tedxnsysu/static/js/main.329b53c0.js",
+    "main.js": "/tedxnsysu/static/js/main.c3c0bb09.js",
     "static/media/crew0_black.png": "/tedxnsysu/static/media/crew0_black.d10a42d32ef4595fda26.png",
     "static/media/event1.png": "/tedxnsysu/static/media/event1.2403890c8a3acf139876.png",
     "static/media/crew.jpg": "/tedxnsysu/static/media/crew.e6a388affc827c9a1e91.jpg",
@@ -37,10 +37,10 @@
     "static/media/jiuzhennan.png": "/tedxnsysu/static/media/jiuzhennan.25d626c47b6942977227.png",
     "index.html": "/tedxnsysu/index.html",
     "main.097db79d.css.map": "/tedxnsysu/static/css/main.097db79d.css.map",
-    "main.329b53c0.js.map": "/tedxnsysu/static/js/main.329b53c0.js.map"
+    "main.c3c0bb09.js.map": "/tedxnsysu/static/js/main.c3c0bb09.js.map"
   },
   "entrypoints": [
     "static/css/main.097db79d.css",
-    "static/js/main.329b53c0.js"
+    "static/js/main.c3c0bb09.js"
   ]
 }
