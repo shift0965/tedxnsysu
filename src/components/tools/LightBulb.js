@@ -29,8 +29,9 @@ export const LinkCircles = [
         y: 0, 
         size: 13.5,
         color: 0,
-        textColor: 1,
-        title: '參加年會',
+        textColor1: 1,
+        textColor2: 2,
+        title: '購票',
         subTitle: 'TICKETS',
         to: '/ticket'
     },
