@@ -6,7 +6,7 @@ import logo from './tools/imgs/logo.png'
 
 const Header = () => {
 
-    const [barOpen, setBarOpen] = new useState(true);
+    const [barOpen, setBarOpen] = new useState(false);
     const switchBar = () => {
         setBarOpen(!barOpen);
     }
@@ -44,7 +44,7 @@ const Header = () => {
     }
 
     const navBarClass = classNames("flex w-full max-w-5xl duration-500",
-                                    {"-translate-y-14":isShrunk});
+                                    {"md:-translate-y-14":isShrunk});
 
     return(
         <nav className='flex justify-center w-full h-14 bg-transparent fixed top-0 z-40'>

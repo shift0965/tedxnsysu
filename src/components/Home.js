@@ -1,6 +1,9 @@
 import { DecorationBase, DecorationCircles, LinkCircles } from "./tools/LightBulb"
 import { Link } from "react-router-dom"
 import { useState,useEffect } from "react"
+import logo from './tools/imgs/logo.png'
+import { motion } from "framer-motion"
+
 
 
 const Home = () => {
@@ -12,7 +15,7 @@ const Home = () => {
     }
 
     const colors = ['#F20C00', '#FFFAFA', '#000000']
-    const [sizeParam, setSizeParam] = useState(1);
+    const [sizeParam, setSizeParam] = useState(1.1);
 
     useEffect(() => {
         function handleResize() {
@@ -20,7 +23,7 @@ const Home = () => {
             setSizeParam(0.9);
           }
           else{
-            setSizeParam(1);
+            setSizeParam(1.1);
           }
         }
         window.addEventListener("resize", handleResize);
@@ -31,6 +34,14 @@ const Home = () => {
 
     return(
         <div className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700 h-screen overflow-hidden`}>
+            <motion.div 
+                initial={{opacity: 0}}
+                animate={{opacity: lightOn? 0:1}}
+                transition={{duration: 0.6}}
+                
+                className={`absolute md:w-72 w-56 top-1/2 -translate-y-full right-1/2 translate-x-1/2`}>
+                <img src={logo} alt="logo"/>
+            </motion.div>
         
             <div className="h-full mx-auto flex justify-center">
                 <div className="flex justify-center md:w-96 w-72 relative items-center">

@@ -13,16 +13,36 @@
   }
 
   .content-container{
-    @apply flex lg:max-w-5xl w-full h-fit justify-center relative
-                lg:flex-row flex-col
+    @apply flex md:max-w-5xl w-full h-fit justify-center relative
+                md:flex-row flex-col
   }
 
-  .image{
-    @apply h-full w-full
+  img{
+    @apply max-h-full max-w-full
   }
 
   .icon{
     @apply m-2 h-8 w-8 cursor-pointer
+  }
+
+  h1{
+    @apply md:text-3xl text-2xl
+  }
+
+  h2{
+    @apply md:text-2xl text-xl
+  }
+
+  h3{
+    @apply md:text-xl text-lg
+  }
+  
+  p{
+    @apply md:text-base text-base
+  }
+
+  .speakerContainer:hover .play{
+    @apply text-7xl opacity-100
   }
 }
 

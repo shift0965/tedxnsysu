@@ -30,8 +30,8 @@ export const LinkCircles = [
         size: 13.5,
         color: 0,
         textColor: 1,
-        title: '',
-        subTitle: '',
+        title: '參加年會',
+        subTitle: 'TICKETS',
         to: '/ticket'
     },
 ]
