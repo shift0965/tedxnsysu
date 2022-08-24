@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/tedxnsysu/static/css/main.15603b30.css",
-    "main.js": "/tedxnsysu/static/js/main.950f2340.js",
+    "main.css": "/tedxnsysu/static/css/main.097db79d.css",
+    "main.js": "/tedxnsysu/static/js/main.329b53c0.js",
     "static/media/crew0_black.png": "/tedxnsysu/static/media/crew0_black.d10a42d32ef4595fda26.png",
+    "static/media/event1.png": "/tedxnsysu/static/media/event1.2403890c8a3acf139876.png",
     "static/media/crew.jpg": "/tedxnsysu/static/media/crew.e6a388affc827c9a1e91.jpg",
+    "static/media/event2.png": "/tedxnsysu/static/media/event2.a822d531bcc5b0f1dfb6.png",
     "static/media/wangxinling.jpg": "/tedxnsysu/static/media/wangxinling.718e9a03ff9d791e7828.jpg",
     "static/media/liuyuxuan.jpg": "/tedxnsysu/static/media/liuyuxuan.87120de8af6e1ea443a0.jpg",
     "static/media/caiwenzhen.jpg": "/tedxnsysu/static/media/caiwenzhen.7ec67ff0880e51f61a5b.jpg",
@@ -22,14 +24,23 @@
     "static/media/wangyuwen.jpeg": "/tedxnsysu/static/media/wangyuwen.c68faa5795cae463e9cc.jpeg",
     "static/media/chenruijia.jpeg": "/tedxnsysu/static/media/chenruijia.2c5a1c562c73a90ac897.jpeg",
     "static/media/Conference2017.jpg": "/tedxnsysu/static/media/Conference2017.9bafc70d77777755807f.jpg",
+    "static/media/liutianhao.jpeg": "/tedxnsysu/static/media/liutianhao.b837e1e1705d9737a8e5.jpeg",
+    "static/media/xiecaini.jpeg": "/tedxnsysu/static/media/xiecaini.dbb255d271fe96932f8d.jpeg",
+    "static/media/hezhaoti.jpeg": "/tedxnsysu/static/media/hezhaoti.55bafea0f2988f3067ea.jpeg",
     "static/media/25_Most_Popular.jpg": "/tedxnsysu/static/media/25_Most_Popular.53a06c4ffbd51944af7d.jpg",
+    "static/media/huangshanliao.jpeg": "/tedxnsysu/static/media/huangshanliao.05e2fcdd585672929555.jpeg",
+    "static/media/qianshan.jpeg": "/tedxnsysu/static/media/qianshan.f9db488091e2a5a5c2e1.jpeg",
+    "static/media/pinpaiyanjiu.png": "/tedxnsysu/static/media/pinpaiyanjiu.f2af260020b9f94d3f7b.png",
+    "static/media/nana.jpeg": "/tedxnsysu/static/media/nana.f237ea4de58f95a90d07.jpeg",
     "static/media/logo.png": "/tedxnsysu/static/media/logo.f7fb1bb64e570693547c.png",
+    "static/media/disha.jpeg": "/tedxnsysu/static/media/disha.1a93f8f5b101e25d453b.jpeg",
+    "static/media/jiuzhennan.png": "/tedxnsysu/static/media/jiuzhennan.25d626c47b6942977227.png",
     "index.html": "/tedxnsysu/index.html",
-    "main.15603b30.css.map": "/tedxnsysu/static/css/main.15603b30.css.map",
-    "main.950f2340.js.map": "/tedxnsysu/static/js/main.950f2340.js.map"
+    "main.097db79d.css.map": "/tedxnsysu/static/css/main.097db79d.css.map",
+    "main.329b53c0.js.map": "/tedxnsysu/static/js/main.329b53c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.15603b30.css",
-    "static/js/main.950f2340.js"
+    "static/css/main.097db79d.css",
+    "static/js/main.329b53c0.js"
   ]
 }
