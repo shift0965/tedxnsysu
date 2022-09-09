@@ -49,9 +49,10 @@ const Header = () => {
     return(
         <nav className='flex justify-center w-full h-14 bg-transparent fixed top-0 z-40'>
 
-            <button className={`nav_toggle w-16 h-16 z-50  ${barOpen? "active" : ""}`} onClick={switchBar}>
+            <button className={`nav_toggle w-16 h-16 z-50  ${barOpen? "active" : ""} rounded-full`} onClick={switchBar}>               
                 <div className="nav_toggle_bar top-6 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                <div className="nav_toggle_bar top-9 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                <div className="nav_toggle_bar top-9 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>  
+                
             </button> 
 
             <div className={navBarClass}>
@@ -66,10 +67,10 @@ const Header = () => {
                             <Link to={'/'} className="nav_link" onClick={closeBar}>首頁</Link>
                         </li> 
                         <li>
-                            <Link to={'/conference'} className="nav_link" onClick={closeBar}>年會</Link>
+                            <Link to={'/conference'} className="nav_link" onClick={closeBar}>演講</Link>
                         </li> 
                         <li>
-                            <Link to={'/crew'} className="nav_link" onClick={closeBar}>團隊</Link>
+                            <Link to={'/crew'} className="nav_link" onClick={closeBar}>關於</Link>
                         </li> 
                         <li>
                             <Link to={'/ticket'} className="nav_link" onClick={closeBar}>購票</Link>

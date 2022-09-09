@@ -1,38 +1,33 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import event1 from "./tools/imgs/event1.png"
+import event1 from "./tools/imgs/event1_1200.png"
 import { conference } from "./tools/Information";
 import {AiOutlinePlayCircle} from 'react-icons/ai'
+
+import { motion } from "framer-motion";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const Conference = () => {
 
-    const onPlayerReady = (event) => {
-        // access to player in all event handlers via event.target
-        event.target.pauseVideo();
-      }
-    
-    const opts = {
-    height: '390',
-    width: '640',
-    playerVars: {
-        // https://developers.google.com/youtube/player_parameters
-        autoplay: 1,
-    },
-    };
-
 
     return(
         
-        <div className="main-container">
+        <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity:0}}
+
+            className="main-container">
             <Header/>
             <div className="content-container md:mt-14 h-fit">
-                <img src={event1} alt="event" className="md:w-3/4"/>
+                <LazyLoadImage effect="blur" src={event1} alt="event" className="md:w-10/12 block mx-auto"/>
             </div>
 
 
             <div className="title items-center flex flex-col relative md:mt-16 mt-8">
-                <h1 className="z-10">子主題介紹</h1>
+                <h1 className="z-10">年會子主題</h1>
                 <div className="h-3 w-52 bg-red -mt-2 z-0"></div>
             </div>
             <div className="content-container h-fit md:mt-10 mt-2">
@@ -83,13 +78,13 @@ const Conference = () => {
             <div className="content-container flex-col md:mt-5 mt-2 h-fit text-center">
                 {conference.map((item, index) => {
                     return(
-                        <div className="mt-5">
+                        <div className="mt-5" key={index}>
                             <h1 className="font-bold">{item.title}</h1>
                             <div className="w-full grid md:grid-cols-2 grid-cols-1 justify-center xl:px-10">
 
                                 {item.videos.map((item, index) => {
                                     return(
-                                        <div className=" speakerContainer flex flex-col cursor-pointer mx-5 my-10 text-left" onClick={() => window.open(item.link)} >
+                                        <div className=" speakerContainer flex flex-col cursor-pointer mx-5 my-10 text-left" key={index} onClick={() => window.open(item.link)} >
                                             <div className="relative">
                                                 <AiOutlinePlayCircle className="play text-6xl absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 opacity-60 duration-300"/>
                                                 {item.image}
@@ -109,7 +104,7 @@ const Conference = () => {
                 })}
             </div>
             <Footer/>
-        </div>
+        </motion.div>
     )
 }
 

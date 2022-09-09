@@ -60,7 +60,7 @@ body {
 }
 
 .nav_toggle .nav_toggle_bar{
-  @apply block h-1 w-6 rounded-full absolute bg-whiteish duration-300
+  @apply block h-1 w-8 rounded-full absolute bg-whiteish duration-300
 }
 .nav_toggle:hover .nav_toggle_bar{
   @apply bg-backgroundBright

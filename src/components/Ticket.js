@@ -2,10 +2,15 @@
 import styled from "styled-components";
 import Footer from "./Footer";
 import Header from "./Header";
-import event from './tools/imgs/event2.png'
+import event from './tools/imgs/event2_700.png'
 
 import jiuzhennan from './tools/imgs/jiuzhennan.png'
 import pinpaiyanjiu from './tools/imgs/pinpaiyanjiu.png'
+
+import { motion } from "framer-motion";
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const P = styled.p`
@@ -16,7 +21,15 @@ const P = styled.p`
 
 const Ticket = () => {
     return(
-        <div className="main-container">
+        
+        <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity:0}}
+
+            className="main-container">
+
+            
             <Header/>
             <div className="content-container flex-col md:mt-14 h-fit">
                 <div className="grid md:grid-cols-2 grid-cols-1 w-full 2xl:px-28 xl:px-20 mt-10">
@@ -54,7 +67,7 @@ const Ticket = () => {
                         </div>
                     </div> 
                     <div className=" md:px-10 py-5 flex justify-center items-center order-2 md:w-full w-60 mx-auto">
-                        <img src={event} alt="poster" />
+                        <LazyLoadImage effect='blur' src={event} alt="poster" />
                     </div>
                 </div>
 
@@ -96,7 +109,7 @@ const Ticket = () => {
                 
             </div>
             <Footer/>
-        </div>
+        </motion.div>
     )
 }
 

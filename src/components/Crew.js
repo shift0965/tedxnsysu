@@ -2,22 +2,32 @@ import { conference_over_years} from "./tools/Information"
 import { crew_member } from "./tools/Members";
 import Footer from "./Footer";
 import Header from "./Header";
-import mostPop25 from './tools/imgs/25_Most_Popular.jpg'
+import mostPop25 from './tools/imgs/25_Most_Popular.png'
 import crew1 from './tools/imgs/crew.jpg'
 
+import {AiOutlinePlayCircle} from 'react-icons/ai'
+import { motion } from "framer-motion";
 
 
 const Crew = () => {
     return(
-        <div className="main-container">
+        <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity:0}}
+
+            className="main-container">
             <Header/>
             <div className=" w-full bg-fixed 2xl:h-xl_crew_h lg:h-l_crew_h md:h-52 h-36 2xl:bg-cover 2xl:bg-center bg-contain bg-no-repeat bg-crew0">
             </div>
             <div className=" md:mt-8 w-full main-container">
                 <div className=" content-container lg:pl-20 lg:pr-20 p-7">
-                    <div className="left lg:w-5/12 lg:order-1 order-2 mt-12 lg:mr-5">
-                        <div className="img-container lg:pr-0 lg:pl-0 pr-5 pl-5">
-                            <img className="image" src={mostPop25} alt="25 most popular speech" />
+                    <div className="left lg:w-5/12 lg:order-1 order-2 mt-12 lg:mr-5 relative">
+                        <div className="img-container relative cursor-pointer" onClick={() => window.open('https://www.youtube.com/watch?v=iG9CE55wbtY&list=PL7ymJb4nsMvka8x2aUa5Y6HQuV_2OgoFF')}>
+                            <img className="image" src={mostPop25} alt="25 most popular speech"/>
+                            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-8 text-6xl opacity-70">
+                                <AiOutlinePlayCircle/>
+                            </span>
                         </div>
                     </div>
                     <div className="right lg:w-7/12 sm:order-1">
@@ -48,14 +58,16 @@ const Crew = () => {
                     </div>
                 </div>
 
-                <div className="content-container lg:pl-12 lg:pr-12 p-7 items-center mt-10">
+                <div className="content-container lg:pl-12 lg:pr-12 p-7 items-center mt-3 mb-6">
                     <div className="text text-white lg:w-10/12 text-center">
                         <h1 className="text-red font-extrabold mb-3">TEDx<span className="text-white">NSYSU</span></h1>
                         <p className=" leading-8">中山大學為國內最年輕之頂尖研究型大學，以人文科技、學風自由聞名，TEDxNSYSU帶有中山大學的名字是因我們以中山出發，將TED提倡之好點子散播、跨領域交流的精神植根於校園內，更進一步分享至高東屏地區。建立資訊、知識及經驗交流平台，必將結出豐碩的學術果實。</p>
                     </div>
                 </div>
 
-                <div className="content-container lg:p-10 p-3 text-center flex-col">
+                <div className=" w-9/12 h-[2px] rounded-full bg-white opacity-70"></div>
+
+                <div className="content-container lg:p-10 p-5 text-center flex-col mt-5">
                     <div className=" text-white w-full">
                         <h1 className="text-red font-extrabold mb-0">關於<span className="text-white">我們</span></h1>
                     </div>
@@ -66,7 +78,7 @@ const Crew = () => {
                                     <h2 className="font-bold">{item.title}</h2>
                                     <h2 className="font-bold">{item.name}</h2>
                                 </div>
-                                <div className=" w-24 border-2 border-red mt-3 mb-3"></div>
+                                <div className=" w-24 border-red mt-3 mb-3"></div>
                                     <div className=" w-60">
                                         {item.image}
                                     </div>
@@ -99,7 +111,7 @@ const Crew = () => {
                 </div>
             </div>
             <Footer/>
-        </div>
+        </motion.div>
     )
 }
 

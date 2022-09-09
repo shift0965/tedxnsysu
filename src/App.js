@@ -5,18 +5,20 @@ import Ticket from "./components/Ticket";
 import Conference from "./components/Conference";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
-
+import {AnimatePresence} from 'framer-motion'
 
 function App() {
   return (
     <Router> 
       <div className=" bg-background">
-        <Routes>
-          <Route path="/"  element={<Home/>}/>
-          <Route path="/conference" element={<Conference/>}/>
-          <Route path="/crew" element={<Crew/>}/>
-          <Route path="/ticket" element={<Ticket/>}/>
-        </Routes>
+        <AnimatePresence>
+          <Routes>
+            <Route path="/"  element={<Home/>}/>
+            <Route path="/conference" element={<Conference/>}/>
+            <Route path="/crew" element={<Crew/>}/>
+            <Route path="/ticket" element={<Ticket/>}/>
+          </Routes>
+        </AnimatePresence>
       </div>
     </Router>
   );

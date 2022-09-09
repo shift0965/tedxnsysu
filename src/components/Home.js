@@ -33,7 +33,13 @@ const Home = () => {
 
 
     return(
-        <div className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700 h-screen overflow-hidden`}>
+        
+        <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity:0}}
+
+            className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700 h-screen overflow-hidden`}>
             <motion.div 
                 initial={{opacity: 0}}
                 animate={{opacity: lightOn? 0:1}}
@@ -129,7 +135,7 @@ const Home = () => {
                     
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
