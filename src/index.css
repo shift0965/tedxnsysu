@@ -4,9 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Noto+Sans+TC&display=swap');
 @layer components{
 
-  .full-page{
-    @apply  flex w-full min-h-screen h-minPageHeight
-  }
 
   .main-container{
     @apply bg-background flex flex-col w-full items-center h-fit text-white

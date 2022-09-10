@@ -67,7 +67,7 @@ const Ticket = () => {
                         </div>
                     </div> 
                     <div className=" md:px-10 py-5 flex justify-center items-center order-2 md:w-full w-60 mx-auto">
-                        <LazyLoadImage effect='blur' src={event} alt="poster" />
+                        <LazyLoadImage effect='opacity' src={event} alt="poster" />
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@ const Ticket = () => {
                     </div>
 
                     <div className=" w-full flex justify-center mt-12 h-24 items-center">
-                        <a className=" py-1.5 px-12 rounded-2xl font-bold text-lg bg-red text-white cursor-pointer hover:bg-white hover:text-red duration-300" onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSckV0EXorNxf1d3ju_k8Yl-TJS5QMXW9iUEZOCWXeOV1_qRcg/closedform')}>購票 Let’s Go</a>
+                        <a className=" py-1.5 px-12 rounded-2xl font-bold text-lg bg-red text-white cursor-pointer hover:bg-white hover:text-red duration-300" href='https://docs.google.com/forms/d/e/1FAIpQLSckV0EXorNxf1d3ju_k8Yl-TJS5QMXW9iUEZOCWXeOV1_qRcg/closedform'>購票 Let’s Go</a>
                     </div>
                     
 

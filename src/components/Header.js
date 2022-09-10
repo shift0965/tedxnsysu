@@ -21,13 +21,13 @@ const Header = () => {
         const handler = () =>{
             setShrunk((isShrunk) => {
                 if(isShrunk){
-                    if(document.body.scrollTop < 4 &&
-                        document.documentElement.scrollTop < 4)
+                    if(document.body.scrollTop < 100 &&
+                        document.documentElement.scrollTop < 100)
                     { return false; }
                 } 
                 else{ 
-                    if(document.body.scrollTop > 20 || 
-                        document.documentElement.scrollTop > 20)
+                    if(document.body.scrollTop > 120 || 
+                        document.documentElement.scrollTop > 120)
                     { return true; }
                 }             
                 return isShrunk;

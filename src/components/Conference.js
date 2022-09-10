@@ -22,7 +22,7 @@ const Conference = () => {
             className="main-container">
             <Header/>
             <div className="content-container md:mt-14 h-fit">
-                <LazyLoadImage effect="blur" src={event1} alt="event" className="md:w-10/12 block mx-auto"/>
+                <LazyLoadImage effect='opacity' src={event1} alt="event" className="md:w-10/12 block mx-auto"/>
             </div>
 
 

@@ -5,10 +5,11 @@ import logo from './tools/imgs/logo.png'
 import { motion } from "framer-motion"
 
 
-
 const Home = () => {
 
     const [lightOn, setLightOn] = useState(false);
+    const [height, setHeight] = useState(window.innerHeight);
+
 
     const switchLight = () => {
         setLightOn(!lightOn);
@@ -19,15 +20,17 @@ const Home = () => {
 
     useEffect(() => {
         function handleResize() {
-          if(window.innerWidth < 768){
+            
+            setHeight(window.innerHeight);
+            
+            if(window.innerWidth < 768){
             setSizeParam(0.9);
-          }
-          else{
+            }
+            else{
             setSizeParam(1.1);
-          }
+            }
         }
         window.addEventListener("resize", handleResize);
-        handleResize();
         return () => window.removeEventListener("resize", handleResize);
       }, []);
 
@@ -38,8 +41,10 @@ const Home = () => {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity:0}}
+            
+            style={{height:height}}
 
-            className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700 h-screen overflow-hidden`}>
+            className={`${lightOn ? 'bg-backgroundBright' : 'bg-background'} md:flex flex-row items-center justify-center duration-700 overflow-hidden relative`}>
             <motion.div 
                 initial={{opacity: 0}}
                 animate={{opacity: lightOn? 0:1}}
@@ -125,7 +130,7 @@ const Home = () => {
                         )}
 
                         <div className={`border-transparent
-                                        block absolute rounded-full -translate-x-1/2 -translate-y-1/2 duration-700 border-2 bg-transparent cursor-pointer`} 
+                                        block absolute rounded-full -translate-x-1/2 -translate-y-1/2 duration-700 bg-transparent cursor-pointer`} 
                                 style={{width:180 * sizeParam + 'px',height:180 * sizeParam+'px', top:225 * sizeParam + 'px', left:0 * 15 * sizeParam + 'px'}}
                                 onClick={switchLight}>
                         </div>
