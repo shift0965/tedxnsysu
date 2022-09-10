@@ -16,20 +16,28 @@ const Home = () => {
     }
 
     const colors = ['#F20C00', '#FFFAFA', '#000000']
+
+
+
     const [sizeParam, setSizeParam] = useState(1.1);
 
-    useEffect(() => {
-        function handleResize() {
-            
-            setHeight(window.innerHeight);
-            
-            if(window.innerWidth < 768){
-            setSizeParam(0.9);
-            }
-            else{
-            setSizeParam(1.1);
-            }
+    function handleResize() {
+        console.log(window.innerHeight);
+        
+        setHeight(window.innerHeight);
+        
+        if(window.innerWidth < 768){
+        setSizeParam(0.9);
         }
+        else{
+        setSizeParam(1.1);
+        }
+    }
+    
+    window.addEventListener('load', handleResize);
+    
+
+    useEffect(() => {
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
       }, []);

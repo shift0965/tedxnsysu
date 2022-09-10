@@ -9,8 +9,6 @@ import pinpaiyanjiu from './tools/imgs/pinpaiyanjiu.png'
 
 import { motion } from "framer-motion";
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const P = styled.p`
@@ -67,7 +65,7 @@ const Ticket = () => {
                         </div>
                     </div> 
                     <div className=" md:px-10 py-5 flex justify-center items-center order-2 md:w-full w-60 mx-auto">
-                        <LazyLoadImage effect='opacity' src={event} alt="poster" />
+                        <img loading="lazy" src={event} alt="poster" />
                     </div>
                 </div>
 

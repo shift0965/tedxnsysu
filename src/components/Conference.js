@@ -5,8 +5,7 @@ import { conference } from "./tools/Information";
 import {AiOutlinePlayCircle} from 'react-icons/ai'
 
 import { motion } from "framer-motion";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 const Conference = () => {
@@ -22,7 +21,7 @@ const Conference = () => {
             className="main-container">
             <Header/>
             <div className="content-container md:mt-14 h-fit">
-                <LazyLoadImage effect='opacity' src={event1} alt="event" className="md:w-10/12 block mx-auto"/>
+                <img loading="lazy" src={event1} alt="event" className="md:w-10/12 block mx-auto"/>
             </div>
 
 
