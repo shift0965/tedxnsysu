@@ -30,6 +30,7 @@ const Home = () => {
         setSizeParam(0.9);
         }
         else{
+            
         setSizeParam(1.1);
         }
     }
